@@ -12,5 +12,33 @@
       "installRMarkdown": true,
       "vscodeRSupport": "full"
     }
+  },
+  "customizations": {
+    "vscode": {
+      // Ensure VS Code extensions for R are present
+      "extensions": [
+        // R Extensions
+        "rdebugger.r-debugger",
+        "reditorsupport.r",
+        // Quarto
+        "quarto.quarto",
+        // LLM  
+        "GitHub.copilot"
+      ]
+    },
+    // Customize R settings
+    "settings": { 
+      "r.rterm.linux": "/usr/local/bin/radian",
+      "r.bracketedPaste": true,
+      "r.plot.useHttpgd": true,
+      "[r]": {
+        "editor.wordSeparators": "`~!@#%$^&*()-=+[{]}\\|;:'\",<>/?"
+      }
+    }
+  },
+  // Enable pak using system package manager
+  // https://github.com/rocker-org/devcontainer-features/blob/main/src/r-rig/README.md#install-r-packages-via-pak
+  "remoteEnv": {
+      "PKG_SYSREQS": "true"
   }
 }
