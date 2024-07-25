@@ -20,6 +20,12 @@ can work locally on the devcontainer:
 This will create a fork of the repository that can be worked on inside a local copy of
 [Visual Studio Code](https://code.visualstudio.com/) through the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers). With the extension installed, you can open the repository in a container by pressing `F1` (to bring up command palette) and typing `Dev Container: Reopen in Container`.
 
+Lastly, you can directly obtain the underlying container image by typing in Terminal: 
+
+```sh
+docker pull ghcr.io/coatless-devcontainer/r-pkg:latest
+```
+
 ## Quick start
 
 Run the following series of commands inside of R once the container opens. Make sure to change `"name-of-package"` to your current package name.
