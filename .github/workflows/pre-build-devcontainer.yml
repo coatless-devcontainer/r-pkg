@@ -1,17 +1,19 @@
 name: 'build' 
 on: # rebuild any PRs and main branch changes
-  pull_request: {}
-  workflow_dispatch: {}
+  pull_request:
+    branches:
+      - main
   push:
     branches:
       - main
-
+  workflow_dispatch: {}
+  
 jobs:
   build:
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
-    runs-on: ubuntu-latest
     env:
       CONTAINER_OWNER: ${{ github.repository_owner }}
       CONTAINER_NAME: ${{ github.event.repository.name }}
@@ -30,6 +32,7 @@ jobs:
       - name: Pre-build dev container image
         uses: devcontainers/ci@v0.3
         with:
+          subFolder: .github
           imageName: ghcr.io/${{ env.CONTAINER_OWNER }}/${{ env.CONTAINER_NAME }}
           cacheFrom: ghcr.io/${{ env.CONTAINER_OWNER }}/${{ env.CONTAINER_NAME }}
           push: always
