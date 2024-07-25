@@ -1,16 +1,9 @@
 // Config options: https://github.com/rocker-org/devcontainer-templates/tree/main/src/r-ver
 {
-  "name": "R Package Dev (rocker/r-ver base)",
-  "image": "ghcr.io/rocker-org/devcontainer/r-ver:4.4",
-  // Add software
-  "features": {
-    // Rig configuration: https://github.com/rocker-org/devcontainer-features/blob/main/src/r-rig/README.md
-    "ghcr.io/rocker-org/devcontainer-features/r-rig:1": {
-      "installDevTools": true,
-      "installRadian": true,
-      "installVscDebugger": true,
-      "installRMarkdown": true,
-      "vscodeRSupport": "full"
-    }
-  }
+  "name": "R Package Dev Prebuilt (rocker/r-ver base)",
+  // Image to pull when not building from scratch. 
+  // See .github/devcontainer/devcontainer.json for build details 
+  // and .github/workflows/pre-build-devcontainer.yml for how the
+  // image is built using GitHub Actions/CI
+  "image": "ghcr.io/coatless-devcontainer/r-pkg:latest"
 }
