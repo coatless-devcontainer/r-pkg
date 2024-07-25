@@ -18,7 +18,7 @@ can work locally on the devcontainer:
 [![Use this template](https://img.shields.io/badge/Use%20this%20template-Create%20new%20repository-blue?logo=github)](https://github.com/coatless-devcontainer/r-pkg/generate)
 
 This will create a fork of the repository that can be worked on inside a local copy of
-[Visual Studio Code](https://code.visualstudio.com/) through the [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension. With the extension installed, you can open the repository in a container by pressing `F1` (to bring up command palette) and typing `Dev Container: Reopen in Container`.
+[Visual Studio Code](https://code.visualstudio.com/) through the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers). With the extension installed, you can open the repository in a container by pressing `F1` (to bring up command palette) and typing `Dev Container: Reopen in Container`.
 
 ## Quick start
 
